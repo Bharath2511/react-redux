@@ -14,7 +14,8 @@ class AddMinions extends Component {
     }
     handleSubmit = (e) => {
             e.preventDefault()
-            console.log(this.state)
+            //console.log(this.state)
+            this.props.addMinion(this.state)
     }
 render() {
     return(
