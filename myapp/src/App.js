@@ -5,8 +5,8 @@ import Minions from './minions'
 class App extends Component {
   state = {
     minions: [  { name:"Bob", age:"25", id:"0"},
-    { name:"kevin", age:"25", id:"1"},
-    { name:"Mario", age:"25", id:"2"}
+    { name:"kevin", age:"20", id:"1"},
+    { name:"Mario", age:"15", id:"2"}
 ] }
   render() {
     return (
