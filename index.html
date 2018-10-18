@@ -17,11 +17,23 @@
              age : "30",
              role : "developer"
          }
+         handleClick(e){
+             console.log(e.target)
+         }
+         handleMouseOver(e) {
+             console.log(e.target)
+         }
+         handleCopy(e) {
+             console.log('have you become')
+         }
          render() {
              return (
               <div className = "app-content">
               <h1>hey</h1>
               <p>My name is : {this.state.name} and I am {this.state.age}</p>
+              <button onClick={this.handleClick}>Click Me</button>
+              <button onMouseOver={this.handleMouseOver}>Hover me</button>
+              <p onCopy={this.handleCopy}>what</p>
               </div>
              )
          }
