@@ -2,13 +2,20 @@ import React,{Component} from 'react'
 
 class Minions extends Component {
     render() {
-        const{name,age,belt} = this.props
-        console.log(this.props)
+        const{minions} = this.props
+        //console.log(this.props)
+        const minionList = minions.map(minion => {
+            return (
+            <div className="minion" key={minion.id}>
+             <div>name : {minion.name}</div>
+             <div>Age : {minion.age}</div>
+             <div>Belt: {minion.belt}</div>
+            </div>
+            )
+        })
         return (
-            <div className="ninja">
-             <div>name : {name}</div>
-             <div>Age : {age}</div>
-             <div>Belt: {belt}</div>
+            <div className="minion-list">
+                {minionList}
             </div>
         )
     }
