@@ -1,8 +1,7 @@
-import React,{Component} from 'react'
+import React from 'react'
 
-class Minions extends Component {
-    render() {
-        const{minions} = this.props
+const Minions = ({minions}) => {
+    
         //console.log(this.props)
         const minionList = minions.map(minion => {
             return (
@@ -18,7 +17,7 @@ class Minions extends Component {
                 {minionList}
             </div>
         )
-    }
+    
 }
 
 export default Minions
