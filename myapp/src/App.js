@@ -18,6 +18,8 @@ class App extends Component {
       minions: minions
     });
   };
+  //it fires when component gets mounted
+
   deleteMinion = id => {
     //console.log(id)
     let minions = this.state.minions.filter(minion => {
@@ -29,6 +31,16 @@ class App extends Component {
       minions: minions
     });
   };
+
+  componentDidMount() {
+    console.log("component mounted");
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log("component updated");
+    console.log(prevProps, prevState);
+  }
+
   render() {
     return (
       <div className="App">
